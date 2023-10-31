@@ -3,33 +3,33 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 import time
 
-# Укажите путь к файлу chromedriver.exe (или другому драйверу) на вашем компьютере
+
 driver = webdriver.Chrome()
 
-# Замените URL ниже на URL страницы входа в Facebook
+# Ссылка для логина
 login_url = 'https://www.facebook.com/login/'
 
-# Ваши учетные данные для авторизации
-username = '375259709836'
-password = 'wolverine5015351'
+# учетные данные для авторизации
+username = 
+password = 
 
 # Загружаем страницу входа
 driver.get(login_url)
 
-# Находим поля для ввода логина и пароля и вводим в них данные
+
 username_input = driver.find_element(By.ID, 'email')
 password_input = driver.find_element(By.ID, 'pass')
 
 username_input.send_keys(username)
 password_input.send_keys(password)
 
-# Нажимаем клавишу Enter, чтобы отправить форму
+# Нажимаем клавишу Enter
 password_input.send_keys(Keys.RETURN)
 
 # Ждем, чтобы страница прогрузилась (может потребоваться регулировать время ожидания)
 time.sleep(5)
 
-# Замените URL ниже на URL вашей группы Facebook
+# Адрес страницы
 url = 'https://www.facebook.com/groups/277415100803816/members?locale=ru_RU'
 
 # Загружаем страницу группы
@@ -38,7 +38,7 @@ driver.get(url)
 # Ждем, чтобы страница прогрузилась
 time.sleep(5)
 
-# Здесь вы можете задать количество прокруток
+# Прокрутки
 scroll_count = 10000
 
 for _ in range(scroll_count):
