@@ -7,9 +7,9 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 import re
-# Инициализация драйвера Selenium
+
 driver = webdriver.Chrome()
-# Открытие страницы
+
 url = "https://combot.org/top/telegram/groups?lng=en&page=1"
 driver.get(url)
 def scroll_to_end(scroll_count):
@@ -22,8 +22,8 @@ def scroll_to_end(scroll_count):
         if current_height == prev_height:
             break
 
-# Прокручиваем страницу до конца и ожидаем загрузку данных
-scroll_count = 3000  # Можно настроить количество спусков
+
+scroll_count = 3000 
 scroll_to_end(scroll_count)
 
 #WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, 'chats')))
